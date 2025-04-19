@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-white text-gray-800">
+
+    <!-- Navbar -->
+<header class="fixed top-0 w-full bg-white shadow z-50">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold">My Portfolio</h1>
+    <nav class="hidden md:flex space-x-4 text-sm font-medium items-center">
+      <a href="#home">
+        <button class="px-4 py-2 bg-amber-100 text-gray-800 rounded-xl shadow-md transition-all duration-300 ease-in-out hover:bg-amber-200 hover:-translate-y-1 hover:shadow-lg">Home</button>
+      </a>
+      <a href="#about">
+        <button class="px-4 py-2 bg-amber-100 text-gray-800 rounded-xl shadow-md transition-all duration-300 ease-in-out hover:bg-amber-200 hover:-translate-y-1 hover:shadow-lg">About</button>
+      </a>
+      <a href="#education">
+        <button class="px-4 py-2 bg-amber-100 text-gray-800 rounded-xl shadow-md transition-all duration-300 ease-in-out hover:bg-amber-200 hover:-translate-y-1 hover:shadow-lg">Education</button>
+      </a>
+      <a href="#projects">
+        <button class="px-4 py-2 bg-amber-100 text-gray-800 rounded-xl shadow-md transition-all duration-300 ease-in-out hover:bg-amber-200 hover:-translate-y-1 hover:shadow-lg">Skills</button>
+      </a>
+      <a href="#contact">
+        <button class="px-4 py-2 bg-amber-100 text-gray-800 rounded-xl shadow-md transition-all duration-300 ease-in-out hover:bg-amber-200 hover:-translate-y-1 hover:shadow-lg">Contact</button>
+      </a>
+    </nav>
+
+    <button class="md:hidden" onclick="toggleMenu()">
+      <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+        viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden flex flex-col items-end px-6 pb-4 space-y-2 text-sm font-medium">
+    <a href="#home" onclick="toggleMenu()">
+      <button class="px-4 py-2 bg-amber-100 text-gray-800 rounded-xl shadow-md transition-all duration-300 ease-in-out hover:bg-amber-200 hover:-translate-y-1 hover:shadow-lg">Home</button>
+    </a>
+    <a href="#about" onclick="toggleMenu()">
+      <button class="px-4 py-2 bg-amber-100 text-gray-800 rounded-xl shadow-md transition-all duration-300 ease-in-out hover:bg-amber-200 hover:-translate-y-1 hover:shadow-lg">About</button>
+    </a>
+    <a href="#education" onclick="toggleMenu()">
+      <button class="px-4 py-2 bg-amber-100 text-gray-800 rounded-xl shadow-md transition-all duration-300 ease-in-out hover:bg-amber-200 hover:-translate-y-1 hover:shadow-lg">Pendidikan</button>
+    </a>
+    <a href="#projects" onclick="toggleMenu()">
+      <button class="px-4 py-2 bg-amber-100 text-gray-800 rounded-xl shadow-md transition-all duration-300 ease-in-out hover:bg-amber-200 hover:-translate-y-1 hover:shadow-lg">Skills</button>
+    </a>
+    <a href="#contact" onclick="toggleMenu()">
+      <button class="px-4 py-2 bg-amber-100 text-gray-800 rounded-xl shadow-md transition-all duration-300 ease-in-out hover:bg-amber-200 hover:-translate-y-1 hover:shadow-lg">Contact</button>
+    </a>
+  </div>
+</header>
+
+
+
+    <!-- Hero -->
+<section id="home" class="min-h-screen flex flex-col md:flex-row items-center justify-between px-6 pt-32 md:pt-40 bg-gradient-to-br from-gray-50 to-white">
+  <div class="md:w-1/2 md:pl-24 text-center md:text-left mb-10 md:mb-0">
+    <h2 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm Nichol</h2>
+    <p class="text-lg md:text-xl text-gray-600 mb-6 max-w-xl">
+      I'm a modern front-end developer passionate about beautiful, fast, and responsive web experiences.
+    </p>
+    <a href="#projects" class="px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition">
+      View My Skills
+    </a>
+  </div>
+  <div class="md:w-1/2 flex justify-center">
+    <img src="ari.jpg" alt="Profile Photo" class="w-80 h-80 object-cover rounded-xl shadow-xl border-8 border-white">
+  </div>
+</section>
+
+
+
+    <!-- About -->
+    <section id="about" class="py-20 bg-white px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h3 class="text-3xl font-bold mb-6">Tentang Saya</h3>
+        <button class="bg-yellow-100 text-gray-800 text-lg leading-relaxed font-medium px-6 py-6 rounded-xl shadow-lg hover:shadow-2xl transition w-full text-left">
+          Nama saya <strong>Nikolas Triputra Mentari</strong>, dan sering disapa <strong>Ari</strong>. Saya berasal dari Nusa Tenggara Timur dan sekarang ini saya tinggal di <strong>Bali</strong> untuk melanjutkan pendidikan saya. Saat ini 
+          saya sedang menempuh pendidikan di <strong>Universitas Primakara Bali</strong> dengan jurusan <strong>Teknik Informatika</strong>. Saya sangat tertarik dengan dunia teknologi dan saya ingin menjadi seorang <strong>Frontend Developer</strong> di masa depan.
+          Saya adalah pribadi yang semangat belajar dan tertarik pada pengembangan web modern serta desain yang responsif.
+        </button>
+      </div>
+    </section>
+    
+
+    <!-- Pendidikan -->
+    <section id="education" class="py-20 bg-white px-6">
+      <div class="max-w-6xl mx-auto">
+        <h3 class="text-3xl font-bold text-center mb-12">Education</h3>
+
+        <!-- Pendidikan Sekarang -->
+<div class="flex flex-col md:flex-row items-center mb-16">
+  <div class="md:w-1/2 md:pr-8 mb-6 md:mb-0">
+    <button class="bg-yellow-100 text-gray-800 font-semibold px-6 py-4 rounded-lg shadow-md w-full text-left">
+      Saya sedang menempuh pendidikan S1 di <strong>Universitas Primakara</strong>, Bali. Kampus ini fokus pada teknologi dan kewirausahaan, yang sangat sesuai dengan minat saya di bidang pengembangan web dan teknologi digital.
+    </button>
+  </div>
+  <div class="md:w-1/2 flex justify-center">
+    <img src="download.jpg" alt="Universitas Primakara" class="rounded-lg shadow-md w-2/3">
+  </div>
+</div>
+
+<!-- Pendidikan Sebelumnya -->
+<div class="flex flex-col md:flex-row items-center">
+  <div class="md:w-1/2 md:pr-8 mb-6 md:mb-0">
+    <button class="bg-yellow-100 text-gray-800 font-semibold px-6 py-4 rounded-lg shadow-md w-full text-left">
+      Sebelumnya saya bersekolah di <strong>SMA Karya Ruteng</strong>. Sekolah ini memberikan dasar pendidikan yang kuat serta berbagai pengalaman organisasi yang membentuk karakter saya hingga hari ini.
+    </button>
+  </div>
+  <div class="md:w-1/2 flex justify-center">
+    <img src="sma karya.jpg" alt="SMA KARYA RUTENG" class="rounded-lg shadow-md w-2/3">
+  </div>
+</div>
+
+
+    <!-- Skills -->
+    <section id="projects" class="py-20 bg-gray-100 px-6">
+      <div class="max-w-6xl mx-auto text-center">
+        <h3 class="text-3xl font-bold mb-10">My Skills</h3>
+        <div class="grid md:grid-cols-3 gap-6 text-left">
+          <div class="rounded-xl p-6 shadow hover:shadow-lg transition duration-300 cursor-pointer bg-white hover:bg-yellow-100 hover:text-gray-900">
+            <h4 class="text-xl font-semibold mb-2">HTML & CSS</h4>
+            <p class="text-gray-600">Pengalaman kuat dalam membuat struktur dan styling halaman web modern.</p>
+          </div>
+          <div class="rounded-xl p-6 shadow hover:shadow-lg transition duration-300 cursor-pointer bg-white hover:bg-yellow-100 hover:text-gray-900">
+            <h4 class="text-xl font-semibold mb-2">JavaScript & React</h4>
+            <p class="text-gray-600">Mengembangkan antarmuka dinamis dan interaktif dengan React dan JavaScript.</p>
+          </div>
+          <div class="rounded-xl p-6 shadow hover:shadow-lg transition duration-300 cursor-pointer bg-white hover:bg-yellow-100 hover:text-gray-900">
+            <h4 class="text-xl font-semibold mb-2">Tailwind CSS</h4>
+            <p class="text-gray-600">Menggunakan Tailwind CSS untuk membangun UI yang konsisten dan responsif.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+<section id="contact" class="py-20 px-6 bg-white">
+  <div class="max-w-xl mx-auto text-center">
+    <h3 class="text-3xl font-bold mb-6">Contact Me</h3>
+    <p class="text-gray-700 mb-6">
+      Jika teman-teman ingin mengenal saya lebih dekat atau ingin bertanya seputar pengalaman saya, silakan hubungi saya melalui media sosial berikut:
+    </p>
+    <div class="flex justify-center space-x-4">
+      <!-- WhatsApp -->
+      <a href="https://wa.me/6282137780863" target="_blank" class="p-4 bg-green-100 text-green-600 rounded-full shadow-md hover:bg-green-200 transition duration-300">
+        <i class="fab fa-whatsapp text-2xl"></i>
+      </a>
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/arimentari79" target="_blank" class="p-4 bg-pink-100 text-pink-500 rounded-full shadow-md hover:bg-pink-200 transition duration-300">
+        <i class="fab fa-instagram text-2xl"></i>
+      </a>
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/profile.php?id=100094882203703" target="_blank" class="p-4 bg-blue-100 text-blue-600 rounded-full shadow-md hover:bg-blue-200 transition duration-300">
+        <i class="fab fa-facebook text-2xl"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-6 text-center text-sm text-gray-500">
+      © 2025 Nikolas Mentari. All rights reserved.
+    </footer>
+
+    <!-- Toggle mobile menu -->
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+      }
+    </script>
+
+  </body>
+</html>
